@@ -17,7 +17,11 @@ SRC     := $(filter-out src/main.c,$(wildcard src/*.c))
 OBJ     := $(SRC:src/%.c=build/%.o)
 BIN     := bin/rede
 
-.PHONY: all run clean help
+# Testes unitarios
+TEST_SRC := $(wildcard tests/unit/test_*.c)
+TEST_BIN := $(TEST_SRC:tests/unit/%.c=build/tests/%)
+
+.PHONY: all run clean help test test-unit
 
 all: $(BIN) ## Compila a aplicacao em bin/rede
 
@@ -32,6 +36,17 @@ build/%.o: src/%.c
 
 run: $(BIN) ## Compila (se necessario) e executa a aplicacao
 	./$(BIN)
+
+test-unit: $(TEST_BIN) ## Compila e executa todos os testes unitarios
+	@for t in $(TEST_BIN); do \
+		./$$t || exit 1; \
+	done
+
+test: test-unit ## Roda todos os testes do projeto
+
+build/tests/%: tests/unit/%.c $(OBJ)
+	@mkdir -p $(dir $@)
+	$(CC) $(CFLAGS) -Itests/unit $< $(OBJ) -o $@
 
 clean: ## Remove os arquivos gerados pela compilacao
 	rm -rf build bin
