@@ -29,6 +29,8 @@ make run
 |---|---|
 | `make` (ou `make all`) | Compila a aplicação, gerando o executável `bin/rede` |
 | `make run` | Compila (se necessário) e executa |
+| `make test` | Roda toda a suíte de testes do projeto |
+| `make test-unit` | Compila e executa especificamente os testes unitários |
 | `make clean` | Apaga os arquivos gerados (`build/` e `bin/`) |
 | `make help` | Lista todos os comandos disponíveis |
 
@@ -69,15 +71,39 @@ Variáveis automáticas usadas no Makefile:
 
 ---
 
+## Testes automatizados
+
+O projeto conta com uma suíte de testes unitários construída do zero, sem bibliotecas externas (em [`tests/unit/test.h`](tests/unit/test.h)).
+
+Para rodar todos os testes:
+```bash
+make test
+```
+
+### Como o mini framework funciona
+
+O framework utiliza recursos padrão da linguagem C:
+- **Macros com `do { ... } while (0)`:** garantem que o bloco de asserção se comporte de maneira segura em qualquer contexto sintático (como dentro de um `if` sem chaves).
+- **Operador `#` (stringificação):** converte a expressão testada em texto para exibição detalhada caso o teste falhe.
+- **Macros `__FILE__` e `__LINE__`:** capturam automaticamente o arquivo e a linha exata onde ocorreu uma asserção falsa.
+- **Asserções disponíveis:**
+  - `ASSERT(cond)`: verifica condição lógica booleana.
+  - `ASSERT_EQ_INT(esperado, obtido)`: compara inteiros e exibe ambos os valores se divergirem.
+  - `ASSERT_EQ_STR(esperado, obtido)`: compara strings com tratamento seguro para ponteiros `NULL`.
+  - `ASSERT_NULL(ptr)` / `ASSERT_NOT_NULL(ptr)`: validações seguras de ponteiros.
+
+---
+
 ## Estrutura do projeto
 
 ```
 .
-├── include/    # Arquivos .h: a interface pública de cada TAD
-├── src/        # Arquivos .c: implementação dos TADs e main.c
-├── tests/      # Testes automatizados
-├── diario/     # Diário de desenvolvimento (uma página por etapa)
-└── Makefile    # Automação de compilação, execução e testes
+├── include/        # Arquivos .h: a interface pública de cada TAD
+├── src/            # Arquivos .c: implementação dos TADs e main.c
+├── tests/
+│   └── unit/       # Framework e suíte de testes unitários (test.h, test_*.c)
+├── diario/         # Diário de desenvolvimento (uma página por etapa)
+└── Makefile        # Automação de compilação, execução e testes
 ```
 
 ---
@@ -90,5 +116,5 @@ Variáveis automáticas usadas no Makefile:
 | R02 | TADs separados em `.h` e `.c`, com gerenciamento correto de memória | ⬜ |
 | R03 | Lista encadeada própria com inserção no fim | ⬜ |
 | R04 | Pilha dinâmica encadeada: push, pop, peek e consulta das últimas 5 ações | ⬜ |
-| R05 | Testes reproduzíveis, tratamento de entradas inválidas e de casos-limite | ⬜ |
+| R05 | Testes reproduzíveis, tratamento de entradas inválidas e de casos-limite | 🟨 em andamento |
 | R06 | Repositório Git com evolução contínua, README e relatório técnico em PDF | 🟨 em andamento |
