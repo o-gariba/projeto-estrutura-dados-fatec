@@ -1,1 +1,6 @@
+# Documentacao base e roteiro interno (mantidos apenas localmente)
 docs/
+
+# Artefatos de compilacao
+build/
+bin/
