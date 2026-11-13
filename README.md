@@ -1,13 +1,13 @@
 # Rede de Equipamentos e Conexões
 
-Aplicação de terminal em **C** para cadastrar equipamentos de rede (roteadores, switches, servidores...), conectá-los entre si e consultá-los. É um projeto prático da disciplina de **Estrutura de Dados** (FATEC) e aplica, na prática:
+Aplicação de terminal em **C11** para cadastrar equipamentos de rede (roteadores, switches, servidores...) em uma **Árvore Binária de Busca (BST)** e gerenciar IDs em uma **Lista Encadeada Simples**. É um projeto prático da disciplina de **Estrutura de Dados** (FATEC) e aplica, na prática:
 
 - **TADs** (Tipos Abstratos de Dados) separados em `.h` / `.c`
-- **Ponteiros** e gerenciamento manual de memória
-- **Lista encadeada**, **pilha** e **fila** implementadas do zero
-- **Algoritmos de ordenação** (Merge Sort e Insertion Sort, comparados)
+- **Ponteiros** e gerenciamento manual de memória sem vazamentos
+- **Árvore Binária de Busca (BST)** com inserção, busca, remoção (0, 1 e 2 filhos) e percurso em-ordem
+- **Lista Encadeada Simples** própria com inserção no fim, remoção do início e exibição
 
-Cada equipamento tem `id` (inteiro positivo e único), `nome`, `tipo` e `localização` (textos de até 79 caracteres).
+Cada equipamento tem `id` (inteiro positivo e único), `nome`, `tipo` e `localização` (textos de até 79 caracteres úteis, armazenados em `char[80]`).
 
 > 📓 O passo a passo do desenvolvimento, com decisões, conceitos e perguntas de revisão, está na pasta [`diario/`](diario/).
 
@@ -112,9 +112,13 @@ O framework utiliza recursos padrão da linguagem C:
 
 | Código | Requisito | Status |
 |---|---|---|
-| R01 | Modelagem com `struct`, ponteiros, IDs válidos e leitura segura de entradas | ⬜ |
-| R02 | TADs separados em `.h` e `.c`, com gerenciamento correto de memória | ⬜ |
-| R03 | Lista encadeada própria com inserção no fim | ⬜ |
-| R04 | Pilha dinâmica encadeada: push, pop, peek e consulta das últimas 5 ações | ⬜ |
-| R05 | Testes reproduzíveis, tratamento de entradas inválidas e de casos-limite | 🟨 em andamento |
-| R06 | Repositório Git com evolução contínua, README e relatório técnico em PDF | 🟨 em andamento |
+| R01 | Aplicação em C11 com `struct`, ponteiros, funções e menu interativo | 🟨 em andamento |
+| R02 | BST com inserção, busca por ID, remoção de nós com 0, 1 ou 2 filhos e listagem em ordem | ⬜ |
+| R03 | Na BST, rejeitar ID duplicado, zero, negativo, texto não numérico e valor fora do intervalo de `int` (e textos válidos até 79 chars) | 🟨 em andamento |
+| R04 | Implementar estrutura linear dinâmica própria (Lista Encadeada Simples) com inserção, remoção e exibição | ⬜ |
+| R05 | Lista guarda IDs inteiros positivos independentes da BST (permite inexistentes na BST, repetidos e persistência após exclusão) | ⬜ |
+| R06 | Lista: inserir no fim, remover do início e exibir do início ao fim | ⬜ |
+| R07 | Ao remover de lista vazia, informar o usuário e manter funcionando; liberar toda memória ao encerrar | ⬜ |
+| R08 | Testes reproduzíveis com entradas, passos e resultados esperados/obtidos e guia de reprodução no README | 🟨 em andamento |
+| R09 | Separar obrigatoriamente BST em `bst.h`/`bst.c` e modularizar a lista encadeada em `.h`/`.c` | ⬜ |
+| R10 | Repositório Git individual, README e relatório técnico em PDF | 🟨 em andamento |
