@@ -1,0 +1,265 @@
+
+==========================================
+SISTEMA DE ESTRUTURA DE DADOS
+==========================================
+1 - Cadastrar registro na BST
+2 - Buscar registro por ID na BST
+3 - Remover registro da BST
+4 - Listar registros em-ordem
+5 - Inserir ID na estrutura linear
+6 - Remover da estrutura linear
+7 - Exibir estrutura linear
+0 - Encerrar
+==========================================
+Escolha uma opcao: BST vazia. Nenhum equipamento cadastrado.
+
+==========================================
+SISTEMA DE ESTRUTURA DE DADOS
+==========================================
+1 - Cadastrar registro na BST
+2 - Buscar registro por ID na BST
+3 - Remover registro da BST
+4 - Listar registros em-ordem
+5 - Inserir ID na estrutura linear
+6 - Remover da estrutura linear
+7 - Exibir estrutura linear
+0 - Encerrar
+==========================================
+Escolha uma opcao: ID do equipamento: Nome do equipamento: Tipo do equipamento: Localizacao: Equipamento ID 50 cadastrado na BST.
+
+==========================================
+SISTEMA DE ESTRUTURA DE DADOS
+==========================================
+1 - Cadastrar registro na BST
+2 - Buscar registro por ID na BST
+3 - Remover registro da BST
+4 - Listar registros em-ordem
+5 - Inserir ID na estrutura linear
+6 - Remover da estrutura linear
+7 - Exibir estrutura linear
+0 - Encerrar
+==========================================
+Escolha uma opcao: ID do equipamento: Nome do equipamento: Tipo do equipamento: Localizacao: Equipamento ID 30 cadastrado na BST.
+
+==========================================
+SISTEMA DE ESTRUTURA DE DADOS
+==========================================
+1 - Cadastrar registro na BST
+2 - Buscar registro por ID na BST
+3 - Remover registro da BST
+4 - Listar registros em-ordem
+5 - Inserir ID na estrutura linear
+6 - Remover da estrutura linear
+7 - Exibir estrutura linear
+0 - Encerrar
+==========================================
+Escolha uma opcao: ID do equipamento: Nome do equipamento: Tipo do equipamento: Localizacao: Equipamento ID 70 cadastrado na BST.
+
+==========================================
+SISTEMA DE ESTRUTURA DE DADOS
+==========================================
+1 - Cadastrar registro na BST
+2 - Buscar registro por ID na BST
+3 - Remover registro da BST
+4 - Listar registros em-ordem
+5 - Inserir ID na estrutura linear
+6 - Remover da estrutura linear
+7 - Exibir estrutura linear
+0 - Encerrar
+==========================================
+Escolha uma opcao: ID do equipamento: Nome do equipamento: Tipo do equipamento: Localizacao: Equipamento ID 20 cadastrado na BST.
+
+==========================================
+SISTEMA DE ESTRUTURA DE DADOS
+==========================================
+1 - Cadastrar registro na BST
+2 - Buscar registro por ID na BST
+3 - Remover registro da BST
+4 - Listar registros em-ordem
+5 - Inserir ID na estrutura linear
+6 - Remover da estrutura linear
+7 - Exibir estrutura linear
+0 - Encerrar
+==========================================
+Escolha uma opcao: ID do equipamento: Nome do equipamento: Tipo do equipamento: Localizacao: Equipamento ID 40 cadastrado na BST.
+
+==========================================
+SISTEMA DE ESTRUTURA DE DADOS
+==========================================
+1 - Cadastrar registro na BST
+2 - Buscar registro por ID na BST
+3 - Remover registro da BST
+4 - Listar registros em-ordem
+5 - Inserir ID na estrutura linear
+6 - Remover da estrutura linear
+7 - Exibir estrutura linear
+0 - Encerrar
+==========================================
+Escolha uma opcao: ID do equipamento: Nome do equipamento: Tipo do equipamento: Localizacao: Equipamento ID 60 cadastrado na BST.
+
+==========================================
+SISTEMA DE ESTRUTURA DE DADOS
+==========================================
+1 - Cadastrar registro na BST
+2 - Buscar registro por ID na BST
+3 - Remover registro da BST
+4 - Listar registros em-ordem
+5 - Inserir ID na estrutura linear
+6 - Remover da estrutura linear
+7 - Exibir estrutura linear
+0 - Encerrar
+==========================================
+Escolha uma opcao: ID do equipamento: Nome do equipamento: Tipo do equipamento: Localizacao: Equipamento ID 80 cadastrado na BST.
+
+==========================================
+SISTEMA DE ESTRUTURA DE DADOS
+==========================================
+1 - Cadastrar registro na BST
+2 - Buscar registro por ID na BST
+3 - Remover registro da BST
+4 - Listar registros em-ordem
+5 - Inserir ID na estrutura linear
+6 - Remover da estrutura linear
+7 - Exibir estrutura linear
+0 - Encerrar
+==========================================
+Escolha uma opcao: ID do equipamento: Nome do equipamento: Tipo do equipamento: Localizacao: Equipamento ID 65 cadastrado na BST.
+
+==========================================
+SISTEMA DE ESTRUTURA DE DADOS
+==========================================
+1 - Cadastrar registro na BST
+2 - Buscar registro por ID na BST
+3 - Remover registro da BST
+4 - Listar registros em-ordem
+5 - Inserir ID na estrutura linear
+6 - Remover da estrutura linear
+7 - Exibir estrutura linear
+0 - Encerrar
+==========================================
+Escolha uma opcao: ID para buscar na BST: ID: 30 | Nome: Dist-30 | Tipo: Switch | Localizacao: Rack B
+
+==========================================
+SISTEMA DE ESTRUTURA DE DADOS
+==========================================
+1 - Cadastrar registro na BST
+2 - Buscar registro por ID na BST
+3 - Remover registro da BST
+4 - Listar registros em-ordem
+5 - Inserir ID na estrutura linear
+6 - Remover da estrutura linear
+7 - Exibir estrutura linear
+0 - Encerrar
+==========================================
+Escolha uma opcao: ID para buscar na BST: Equipamento ID 99 nao encontrado na BST.
+
+==========================================
+SISTEMA DE ESTRUTURA DE DADOS
+==========================================
+1 - Cadastrar registro na BST
+2 - Buscar registro por ID na BST
+3 - Remover registro da BST
+4 - Listar registros em-ordem
+5 - Inserir ID na estrutura linear
+6 - Remover da estrutura linear
+7 - Exibir estrutura linear
+0 - Encerrar
+==========================================
+Escolha uma opcao: --- Equipamentos em-ordem (total: 8) ---
+ID: 20 | Nome: Access-20 | Tipo: Switch | Localizacao: Sala 1
+ID: 30 | Nome: Dist-30 | Tipo: Switch | Localizacao: Rack B
+ID: 40 | Nome: FW-40 | Tipo: Firewall | Localizacao: DMZ
+ID: 50 | Nome: Core-50 | Tipo: Roteador | Localizacao: Rack A
+ID: 60 | Nome: SW-60 | Tipo: Switch | Localizacao: Sala 2
+ID: 65 | Nome: AP-65 | Tipo: Access Point | Localizacao: Andar 2
+ID: 70 | Nome: Edge-70 | Tipo: Roteador | Localizacao: Rack C
+ID: 80 | Nome: SRV-80 | Tipo: Servidor | Localizacao: CPD
+
+==========================================
+SISTEMA DE ESTRUTURA DE DADOS
+==========================================
+1 - Cadastrar registro na BST
+2 - Buscar registro por ID na BST
+3 - Remover registro da BST
+4 - Listar registros em-ordem
+5 - Inserir ID na estrutura linear
+6 - Remover da estrutura linear
+7 - Exibir estrutura linear
+0 - Encerrar
+==========================================
+Escolha uma opcao: ID para remover da BST: Equipamento ID 20 removido da BST.
+
+==========================================
+SISTEMA DE ESTRUTURA DE DADOS
+==========================================
+1 - Cadastrar registro na BST
+2 - Buscar registro por ID na BST
+3 - Remover registro da BST
+4 - Listar registros em-ordem
+5 - Inserir ID na estrutura linear
+6 - Remover da estrutura linear
+7 - Exibir estrutura linear
+0 - Encerrar
+==========================================
+Escolha uma opcao: ID para remover da BST: Equipamento ID 60 removido da BST.
+
+==========================================
+SISTEMA DE ESTRUTURA DE DADOS
+==========================================
+1 - Cadastrar registro na BST
+2 - Buscar registro por ID na BST
+3 - Remover registro da BST
+4 - Listar registros em-ordem
+5 - Inserir ID na estrutura linear
+6 - Remover da estrutura linear
+7 - Exibir estrutura linear
+0 - Encerrar
+==========================================
+Escolha uma opcao: ID para remover da BST: Equipamento ID 50 removido da BST.
+
+==========================================
+SISTEMA DE ESTRUTURA DE DADOS
+==========================================
+1 - Cadastrar registro na BST
+2 - Buscar registro por ID na BST
+3 - Remover registro da BST
+4 - Listar registros em-ordem
+5 - Inserir ID na estrutura linear
+6 - Remover da estrutura linear
+7 - Exibir estrutura linear
+0 - Encerrar
+==========================================
+Escolha uma opcao: ID para remover da BST: Equipamento ID 99 nao encontrado na BST.
+
+==========================================
+SISTEMA DE ESTRUTURA DE DADOS
+==========================================
+1 - Cadastrar registro na BST
+2 - Buscar registro por ID na BST
+3 - Remover registro da BST
+4 - Listar registros em-ordem
+5 - Inserir ID na estrutura linear
+6 - Remover da estrutura linear
+7 - Exibir estrutura linear
+0 - Encerrar
+==========================================
+Escolha uma opcao: --- Equipamentos em-ordem (total: 5) ---
+ID: 30 | Nome: Dist-30 | Tipo: Switch | Localizacao: Rack B
+ID: 40 | Nome: FW-40 | Tipo: Firewall | Localizacao: DMZ
+ID: 65 | Nome: AP-65 | Tipo: Access Point | Localizacao: Andar 2
+ID: 70 | Nome: Edge-70 | Tipo: Roteador | Localizacao: Rack C
+ID: 80 | Nome: SRV-80 | Tipo: Servidor | Localizacao: CPD
+
+==========================================
+SISTEMA DE ESTRUTURA DE DADOS
+==========================================
+1 - Cadastrar registro na BST
+2 - Buscar registro por ID na BST
+3 - Remover registro da BST
+4 - Listar registros em-ordem
+5 - Inserir ID na estrutura linear
+6 - Remover da estrutura linear
+7 - Exibir estrutura linear
+0 - Encerrar
+==========================================
+Escolha uma opcao: Encerrando sistema e liberando memoria...

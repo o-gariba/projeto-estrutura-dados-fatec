@@ -1,0 +1,56 @@
+4
+1
+50
+Core-50
+Roteador
+Rack A
+1
+30
+Dist-30
+Switch
+Rack B
+1
+70
+Edge-70
+Roteador
+Rack C
+1
+20
+Access-20
+Switch
+Sala 1
+1
+40
+FW-40
+Firewall
+DMZ
+1
+60
+SW-60
+Switch
+Sala 2
+1
+80
+SRV-80
+Servidor
+CPD
+1
+65
+AP-65
+Access Point
+Andar 2
+2
+30
+2
+99
+4
+3
+20
+3
+60
+3
+50
+3
+99
+4
+0

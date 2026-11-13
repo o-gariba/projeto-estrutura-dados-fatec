@@ -1,0 +1,106 @@
+
+==========================================
+SISTEMA DE ESTRUTURA DE DADOS
+==========================================
+1 - Cadastrar registro na BST
+2 - Buscar registro por ID na BST
+3 - Remover registro da BST
+4 - Listar registros em-ordem
+5 - Inserir ID na estrutura linear
+6 - Remover da estrutura linear
+7 - Exibir estrutura linear
+0 - Encerrar
+==========================================
+Escolha uma opcao: Erro: Valor fora do intervalo permitido. Escolha uma opcao entre 0 e 7.
+
+==========================================
+SISTEMA DE ESTRUTURA DE DADOS
+==========================================
+1 - Cadastrar registro na BST
+2 - Buscar registro por ID na BST
+3 - Remover registro da BST
+4 - Listar registros em-ordem
+5 - Inserir ID na estrutura linear
+6 - Remover da estrutura linear
+7 - Exibir estrutura linear
+0 - Encerrar
+==========================================
+Escolha uma opcao: Erro: Formato invalido. Informe um numero inteiro valido. Escolha uma opcao entre 0 e 7.
+
+==========================================
+SISTEMA DE ESTRUTURA DE DADOS
+==========================================
+1 - Cadastrar registro na BST
+2 - Buscar registro por ID na BST
+3 - Remover registro da BST
+4 - Listar registros em-ordem
+5 - Inserir ID na estrutura linear
+6 - Remover da estrutura linear
+7 - Exibir estrutura linear
+0 - Encerrar
+==========================================
+Escolha uma opcao: ID do equipamento: Nome do equipamento: Tipo do equipamento: Localizacao: Equipamento ID 10 cadastrado na BST.
+
+==========================================
+SISTEMA DE ESTRUTURA DE DADOS
+==========================================
+1 - Cadastrar registro na BST
+2 - Buscar registro por ID na BST
+3 - Remover registro da BST
+4 - Listar registros em-ordem
+5 - Inserir ID na estrutura linear
+6 - Remover da estrutura linear
+7 - Exibir estrutura linear
+0 - Encerrar
+==========================================
+Escolha uma opcao: ID do equipamento: Erro: Valor fora do intervalo permitido. Informe um ID inteiro positivo.
+ID do equipamento: Erro: Valor fora do intervalo permitido. Informe um ID inteiro positivo.
+ID do equipamento: Erro: Formato invalido. Informe um numero inteiro valido. Informe um ID inteiro positivo.
+ID do equipamento: Erro: Formato invalido. Informe um numero inteiro valido. Informe um ID inteiro positivo.
+ID do equipamento: Erro: Valor fora do intervalo permitido. Informe um ID inteiro positivo.
+ID do equipamento: Erro: ID 10 ja cadastrado na BST.
+
+==========================================
+SISTEMA DE ESTRUTURA DE DADOS
+==========================================
+1 - Cadastrar registro na BST
+2 - Buscar registro por ID na BST
+3 - Remover registro da BST
+4 - Listar registros em-ordem
+5 - Inserir ID na estrutura linear
+6 - Remover da estrutura linear
+7 - Exibir estrutura linear
+0 - Encerrar
+==========================================
+Escolha uma opcao: ID do equipamento: Nome do equipamento: Erro: Entrada vazia ou apenas espacos em branco.
+Nome do equipamento: Erro: Entrada vazia ou apenas espacos em branco.
+Nome do equipamento: Erro: Entrada excede o limite de 79 caracteres.
+Nome do equipamento: Tipo do equipamento: Localizacao: Equipamento ID 20 cadastrado na BST.
+
+==========================================
+SISTEMA DE ESTRUTURA DE DADOS
+==========================================
+1 - Cadastrar registro na BST
+2 - Buscar registro por ID na BST
+3 - Remover registro da BST
+4 - Listar registros em-ordem
+5 - Inserir ID na estrutura linear
+6 - Remover da estrutura linear
+7 - Exibir estrutura linear
+0 - Encerrar
+==========================================
+Escolha uma opcao: ID para buscar na BST: ID: 20 | Nome: Backup Link | Tipo: Roteador Borda | Localizacao: Sala 02
+
+==========================================
+SISTEMA DE ESTRUTURA DE DADOS
+==========================================
+1 - Cadastrar registro na BST
+2 - Buscar registro por ID na BST
+3 - Remover registro da BST
+4 - Listar registros em-ordem
+5 - Inserir ID na estrutura linear
+6 - Remover da estrutura linear
+7 - Exibir estrutura linear
+0 - Encerrar
+==========================================
+Escolha uma opcao: Encerrando sistema e liberando memoria...

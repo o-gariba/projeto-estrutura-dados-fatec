@@ -1,0 +1,226 @@
+
+==========================================
+SISTEMA DE ESTRUTURA DE DADOS
+==========================================
+1 - Cadastrar registro na BST
+2 - Buscar registro por ID na BST
+3 - Remover registro da BST
+4 - Listar registros em-ordem
+5 - Inserir ID na estrutura linear
+6 - Remover da estrutura linear
+7 - Exibir estrutura linear
+0 - Encerrar
+==========================================
+Escolha uma opcao: Aviso: estrutura linear vazia. Nada a remover.
+
+==========================================
+SISTEMA DE ESTRUTURA DE DADOS
+==========================================
+1 - Cadastrar registro na BST
+2 - Buscar registro por ID na BST
+3 - Remover registro da BST
+4 - Listar registros em-ordem
+5 - Inserir ID na estrutura linear
+6 - Remover da estrutura linear
+7 - Exibir estrutura linear
+0 - Encerrar
+==========================================
+Escolha uma opcao: Estrutura linear vazia.
+
+==========================================
+SISTEMA DE ESTRUTURA DE DADOS
+==========================================
+1 - Cadastrar registro na BST
+2 - Buscar registro por ID na BST
+3 - Remover registro da BST
+4 - Listar registros em-ordem
+5 - Inserir ID na estrutura linear
+6 - Remover da estrutura linear
+7 - Exibir estrutura linear
+0 - Encerrar
+==========================================
+Escolha uma opcao: ID para inserir na lista encadeada: Erro: Valor fora do intervalo permitido. Informe um ID inteiro positivo.
+ID para inserir na lista encadeada: Erro: Formato invalido. Informe um numero inteiro valido. Informe um ID inteiro positivo.
+ID para inserir na lista encadeada: ID 500 inserido no fim da lista encadeada.
+
+==========================================
+SISTEMA DE ESTRUTURA DE DADOS
+==========================================
+1 - Cadastrar registro na BST
+2 - Buscar registro por ID na BST
+3 - Remover registro da BST
+4 - Listar registros em-ordem
+5 - Inserir ID na estrutura linear
+6 - Remover da estrutura linear
+7 - Exibir estrutura linear
+0 - Encerrar
+==========================================
+Escolha uma opcao: ID para inserir na lista encadeada: ID 777 inserido no fim da lista encadeada.
+
+==========================================
+SISTEMA DE ESTRUTURA DE DADOS
+==========================================
+1 - Cadastrar registro na BST
+2 - Buscar registro por ID na BST
+3 - Remover registro da BST
+4 - Listar registros em-ordem
+5 - Inserir ID na estrutura linear
+6 - Remover da estrutura linear
+7 - Exibir estrutura linear
+0 - Encerrar
+==========================================
+Escolha uma opcao: ID para inserir na lista encadeada: ID 500 inserido no fim da lista encadeada.
+
+==========================================
+SISTEMA DE ESTRUTURA DE DADOS
+==========================================
+1 - Cadastrar registro na BST
+2 - Buscar registro por ID na BST
+3 - Remover registro da BST
+4 - Listar registros em-ordem
+5 - Inserir ID na estrutura linear
+6 - Remover da estrutura linear
+7 - Exibir estrutura linear
+0 - Encerrar
+==========================================
+Escolha uma opcao: ID do equipamento: Nome do equipamento: Tipo do equipamento: Localizacao: Equipamento ID 10 cadastrado na BST.
+
+==========================================
+SISTEMA DE ESTRUTURA DE DADOS
+==========================================
+1 - Cadastrar registro na BST
+2 - Buscar registro por ID na BST
+3 - Remover registro da BST
+4 - Listar registros em-ordem
+5 - Inserir ID na estrutura linear
+6 - Remover da estrutura linear
+7 - Exibir estrutura linear
+0 - Encerrar
+==========================================
+Escolha uma opcao: ID para inserir na lista encadeada: ID 10 inserido no fim da lista encadeada.
+
+==========================================
+SISTEMA DE ESTRUTURA DE DADOS
+==========================================
+1 - Cadastrar registro na BST
+2 - Buscar registro por ID na BST
+3 - Remover registro da BST
+4 - Listar registros em-ordem
+5 - Inserir ID na estrutura linear
+6 - Remover da estrutura linear
+7 - Exibir estrutura linear
+0 - Encerrar
+==========================================
+Escolha uma opcao: ID para remover da BST: Equipamento ID 10 removido da BST.
+
+==========================================
+SISTEMA DE ESTRUTURA DE DADOS
+==========================================
+1 - Cadastrar registro na BST
+2 - Buscar registro por ID na BST
+3 - Remover registro da BST
+4 - Listar registros em-ordem
+5 - Inserir ID na estrutura linear
+6 - Remover da estrutura linear
+7 - Exibir estrutura linear
+0 - Encerrar
+==========================================
+Escolha uma opcao: Lista (inicio -> fim) [4]: 500 -> 777 -> 500 -> 10
+
+==========================================
+SISTEMA DE ESTRUTURA DE DADOS
+==========================================
+1 - Cadastrar registro na BST
+2 - Buscar registro por ID na BST
+3 - Remover registro da BST
+4 - Listar registros em-ordem
+5 - Inserir ID na estrutura linear
+6 - Remover da estrutura linear
+7 - Exibir estrutura linear
+0 - Encerrar
+==========================================
+Escolha uma opcao: ID 500 removido do inicio da lista encadeada.
+
+==========================================
+SISTEMA DE ESTRUTURA DE DADOS
+==========================================
+1 - Cadastrar registro na BST
+2 - Buscar registro por ID na BST
+3 - Remover registro da BST
+4 - Listar registros em-ordem
+5 - Inserir ID na estrutura linear
+6 - Remover da estrutura linear
+7 - Exibir estrutura linear
+0 - Encerrar
+==========================================
+Escolha uma opcao: ID 777 removido do inicio da lista encadeada.
+
+==========================================
+SISTEMA DE ESTRUTURA DE DADOS
+==========================================
+1 - Cadastrar registro na BST
+2 - Buscar registro por ID na BST
+3 - Remover registro da BST
+4 - Listar registros em-ordem
+5 - Inserir ID na estrutura linear
+6 - Remover da estrutura linear
+7 - Exibir estrutura linear
+0 - Encerrar
+==========================================
+Escolha uma opcao: Lista (inicio -> fim) [2]: 500 -> 10
+
+==========================================
+SISTEMA DE ESTRUTURA DE DADOS
+==========================================
+1 - Cadastrar registro na BST
+2 - Buscar registro por ID na BST
+3 - Remover registro da BST
+4 - Listar registros em-ordem
+5 - Inserir ID na estrutura linear
+6 - Remover da estrutura linear
+7 - Exibir estrutura linear
+0 - Encerrar
+==========================================
+Escolha uma opcao: ID 500 removido do inicio da lista encadeada.
+
+==========================================
+SISTEMA DE ESTRUTURA DE DADOS
+==========================================
+1 - Cadastrar registro na BST
+2 - Buscar registro por ID na BST
+3 - Remover registro da BST
+4 - Listar registros em-ordem
+5 - Inserir ID na estrutura linear
+6 - Remover da estrutura linear
+7 - Exibir estrutura linear
+0 - Encerrar
+==========================================
+Escolha uma opcao: ID 10 removido do inicio da lista encadeada.
+
+==========================================
+SISTEMA DE ESTRUTURA DE DADOS
+==========================================
+1 - Cadastrar registro na BST
+2 - Buscar registro por ID na BST
+3 - Remover registro da BST
+4 - Listar registros em-ordem
+5 - Inserir ID na estrutura linear
+6 - Remover da estrutura linear
+7 - Exibir estrutura linear
+0 - Encerrar
+==========================================
+Escolha uma opcao: Aviso: estrutura linear vazia. Nada a remover.
+
+==========================================
+SISTEMA DE ESTRUTURA DE DADOS
+==========================================
+1 - Cadastrar registro na BST
+2 - Buscar registro por ID na BST
+3 - Remover registro da BST
+4 - Listar registros em-ordem
+5 - Inserir ID na estrutura linear
+6 - Remover da estrutura linear
+7 - Exibir estrutura linear
+0 - Encerrar
+==========================================
+Escolha uma opcao: Encerrando sistema e liberando memoria...
