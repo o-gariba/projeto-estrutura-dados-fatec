@@ -108,6 +108,8 @@ static int g_falha_atual       = 0;
     if (g_falha_atual == 0) { \
         g_testes_passados++; \
         printf("[OK]\n"); \
+    } else { \
+        g_testes_falhas++; \
     } \
 } while (0)
 
