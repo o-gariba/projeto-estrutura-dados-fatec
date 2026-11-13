@@ -258,6 +258,56 @@ TEST(deve_rejeitar_argumentos_invalidos)
     bst_destruir(arv);
 }
 
+TEST(deve_imprimir_arvore_hierarquica_corretamente)
+{
+    BST *arv = bst_criar();
+    FILE *out = tmpfile();
+    char linha[256];
+    const char *esperadas[] = {
+        "50 (Core-50)\n",
+        "|-- [E] 30 (Dist-30)\n",
+        "|   |-- [E] 20 (Access-20)\n",
+        "|   \\-- [D] 40 (FW-40)\n",
+        "\\-- [D] 70 (Edge-70)\n",
+        "    |-- [E] 60 (SW-60)\n",
+        "    |   \\-- [D] 65 (AP-65)\n",
+        "    \\-- [D] 80 (NomeMuitoLongoDeE...)\n"
+    };
+    int i;
+
+    ASSERT_NOT_NULL(arv);
+    ASSERT_NOT_NULL(out);
+
+    /* Arvore vazia e ponteiros NULL nao devem falhar nem imprimir nada */
+    bst_imprimir_arvore(NULL, out);
+    bst_imprimir_arvore(arv, NULL);
+    bst_imprimir_arvore(arv, out);
+    rewind(out);
+    ASSERT_NULL(fgets(linha, (int)sizeof(linha), out));
+
+    ASSERT_EQ_INT(BST_OK, bst_inserir(arv, novo_eq(50, "Core-50")));
+    ASSERT_EQ_INT(BST_OK, bst_inserir(arv, novo_eq(30, "Dist-30")));
+    ASSERT_EQ_INT(BST_OK, bst_inserir(arv, novo_eq(70, "Edge-70")));
+    ASSERT_EQ_INT(BST_OK, bst_inserir(arv, novo_eq(20, "Access-20")));
+    ASSERT_EQ_INT(BST_OK, bst_inserir(arv, novo_eq(40, "FW-40")));
+    ASSERT_EQ_INT(BST_OK, bst_inserir(arv, novo_eq(60, "SW-60")));
+    ASSERT_EQ_INT(BST_OK,
+                  bst_inserir(arv, novo_eq(80, "NomeMuitoLongoDeEquipamento")));
+    ASSERT_EQ_INT(BST_OK, bst_inserir(arv, novo_eq(65, "AP-65")));
+
+    bst_imprimir_arvore(arv, out);
+    rewind(out);
+
+    for (i = 0; i < 8; i++) {
+        ASSERT_NOT_NULL(fgets(linha, (int)sizeof(linha), out));
+        ASSERT_EQ_STR(esperadas[i], linha);
+    }
+    ASSERT_NULL(fgets(linha, (int)sizeof(linha), out));
+
+    fclose(out);
+    bst_destruir(arv);
+}
+
 int main(void)
 {
     printf("\n=== Executando Testes da BST ===\n");
@@ -269,6 +319,7 @@ int main(void)
     RUN_TEST(deve_remover_no_com_dois_filhos_e_raiz);
     RUN_TEST(deve_remover_sucessor_profundo_com_subarvore_direita);
     RUN_TEST(deve_rejeitar_argumentos_invalidos);
+    RUN_TEST(deve_imprimir_arvore_hierarquica_corretamente);
 
     return TEST_RESUMO();
 }
