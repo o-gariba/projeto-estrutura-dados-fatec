@@ -33,6 +33,8 @@ SISTEMA DE ESTRUTURA DE DADOS
 2 - Buscar registro por ID na BST
 3 - Remover registro da BST
 4 - Listar registros em-ordem
+8 - Exibir BST em formato de arvore
+9 - Gerar registros aleatorios na BST (Faker)
 5 - Inserir ID na estrutura linear
 6 - Remover da estrutura linear
 7 - Exibir estrutura linear
@@ -64,7 +66,10 @@ flowchart TD
     main["src/main.c"] --> app["app (include/app.h, src/app.c)"]
     app --> io["io (include/io.h, src/io.c)"]
     app --> bst["bst (include/bst.h, src/bst.c)"]
+    app --> faker["faker (include/faker.h, src/faker.c)"]
     app --> lista["lista (include/lista.h, src/lista.c)"]
+    faker --> bst
+    faker --> eq
     bst --> eq["equipamento (include/equipamento.h, src/equipamento.c)"]
 ```
 
@@ -76,11 +81,13 @@ flowchart TD
 | **BST** | Buscar (`bst_buscar`) | $O(\log n)$ | $O(n)$ | $O(1)$ |
 | **BST** | Remover 0, 1 ou 2 filhos (`bst_remover`) | $O(\log n)$ | $O(n)$ | $O(h)$ |
 | **BST** | Listar em-ordem (`bst_listar_em_ordem`) | $O(n)$ | $O(n)$ | $O(h)$ |
+| **BST** | Imprimir em árvore (`bst_imprimir_arvore`) | $O(n)$ visitas ($O(n \log n)$ escrita) | $O(n^2)$ escrita | $O(h)$ (0 heap) |
 | **BST** | Destruir em pós-ordem (`bst_destruir`) | $O(n)$ | $O(n)$ | $O(h)$ |
 | **Lista** | Inserir no fim (`lista_inserir_fim`) | $O(1)$ | $O(1)$ | $O(1)$ |
 | **Lista** | Remover do início (`lista_remover_inicio`) | $O(1)$ | $O(1)$ | $O(1)$ |
 | **Lista** | Exibir início→fim (`lista_exibir`) | $O(m)$ | $O(m)$ | $O(1)$ |
 | **Lista** | Destruir (`lista_destruir`) | $O(m)$ | $O(m)$ | $O(1)$ |
+| **Faker** | Popular BST (`faker_popular_bst`) | $O(q \log(n + q))$ | $O(q (n + q))$ | $O(h)$ |
 
 *(Onde $n$ é a quantidade de equipamentos na BST, $h$ sua altura e $m$ a quantidade de IDs na lista encadeada.)*
 
@@ -111,8 +118,8 @@ flowchart TD
 ## Testes automatizados e reprodutibilidade (R08)
 
 O projeto conta com:
-- **Testes unitários** (`tests/unit/`): construídos com o mini framework próprio em [`tests/unit/test.h`](tests/unit/test.h), cobrindo `io`, `equipamento`, `bst` e `lista` (**27 testes em 5 suítes**).
-- **Testes ponta-a-ponta (E2E)** (`tests/e2e/`): o script [`tests/e2e/run_e2e.sh`](tests/e2e/run_e2e.sh) alimenta `./bin/rede` com arquivos `.in` e compara a saída exata contra `.esperado` via `diff -u` (**4 cenários**).
+- **Testes unitários** (`tests/unit/`): construídos com o mini framework próprio em [`tests/unit/test.h`](tests/unit/test.h), cobrindo `io`, `equipamento`, `bst`, `lista` e `faker` (**32 testes em 6 suítes**).
+- **Testes ponta-a-ponta (E2E)** (`tests/e2e/`): o script [`tests/e2e/run_e2e.sh`](tests/e2e/run_e2e.sh) alimenta `./bin/rede` com arquivos `.in` e compara a saída exata contra `.esperado` via `diff -u` (**5 cenários**).
 - **Roteiro de evidências:** a tabela completa com entradas, passos, resultados esperados/obtidos e verificação de memória está em [`tests/ROTEIRO_EVIDENCIAS.md`](tests/ROTEIRO_EVIDENCIAS.md).
 
 ### Como reproduzir tudo
@@ -139,18 +146,20 @@ make
 │   ├── app.h                  # Interface da aplicacao e menu
 │   ├── bst.h                  # Interface da BST (R02, R09)
 │   ├── equipamento.h          # TAD Equipamento e invariantes
+│   ├── faker.h                # Gerador pseudoaleatorio de registros (xorshift32)
 │   ├── io.h                   # Leitura segura e validacao numerica/textual
 │   └── lista.h                # Interface da Lista Encadeada Simples (R04, R09)
 ├── src/
 │   ├── app.c
 │   ├── bst.c
 │   ├── equipamento.c
+│   ├── faker.c
 │   ├── io.c
 │   ├── lista.c
 │   └── main.c
 ├── tests/
 │   ├── ROTEIRO_EVIDENCIAS.md  # Tabela reproduzivel de entradas, passos e resultados
-│   ├── unit/                  # test.h + test_framework.c, test_io.c, test_equipamento.c, test_bst.c, test_lista.c
+│   ├── unit/                  # test.h + test_framework.c, test_io.c, test_equipamento.c, test_bst.c, test_lista.c, test_faker.c
 │   └── e2e/                   # run_e2e.sh + casos/*.in e casos/*.esperado
 ├── diario/                    # Diario tecnico e guia de estudo (00 a 09)
 ├── relatorio/
