@@ -1,0 +1,90 @@
+
+==========================================
+SISTEMA DE ESTRUTURA DE DADOS
+==========================================
+1 - Cadastrar registro na BST
+2 - Buscar registro por ID na BST
+3 - Remover registro da BST
+4 - Listar registros em-ordem
+8 - Exibir BST em formato de arvore
+9 - Gerar registros aleatorios na BST (Faker)
+5 - Inserir ID na estrutura linear
+6 - Remover da estrutura linear
+7 - Exibir estrutura linear
+0 - Encerrar
+==========================================
+Escolha uma opcao: Quantidade de registros a gerar (1 a 1000): Erro: Valor fora do intervalo permitido. Informe um numero inteiro entre 1 e 1000.
+Quantidade de registros a gerar (1 a 1000): Erro: Valor fora do intervalo permitido. Informe um numero inteiro entre 1 e 1000.
+Quantidade de registros a gerar (1 a 1000): Erro: Formato invalido. Informe um numero inteiro valido. Informe um numero inteiro entre 1 e 1000.
+Quantidade de registros a gerar (1 a 1000): Erro: Valor fora do intervalo permitido. Informe um numero inteiro entre 1 e 1000.
+Quantidade de registros a gerar (1 a 1000): 
+------------------------------------------
+Foram gerados e inseridos 5 registros na BST (total: 5).
+------------------------------------------
+
+==========================================
+SISTEMA DE ESTRUTURA DE DADOS
+==========================================
+1 - Cadastrar registro na BST
+2 - Buscar registro por ID na BST
+3 - Remover registro da BST
+4 - Listar registros em-ordem
+8 - Exibir BST em formato de arvore
+9 - Gerar registros aleatorios na BST (Faker)
+5 - Inserir ID na estrutura linear
+6 - Remover da estrutura linear
+7 - Exibir estrutura linear
+0 - Encerrar
+==========================================
+Escolha uma opcao: 
+------------------------------------------
+--- Equipamentos em-ordem (total: 5) ---
+ID: 273 | Nome: AP-Sul-07 | Tipo: Storage NAS | Localizacao: Portaria Central
+ID: 433 | Nome: Server-Cloud-66 | Tipo: Load Balancer | Localizacao: Andar 3 - Ala B
+ID: 789 | Nome: Edge-Matriz-10 | Tipo: Roteador | Localizacao: Rack A1 - CPD
+ID: 841 | Nome: Gateway-Cloud-21 | Tipo: Switch L3 | Localizacao: Portaria Central
+ID: 948 | Nome: Edge-Filial-SP-67 | Tipo: Modem Fibra | Localizacao: Lab Informatica
+------------------------------------------
+
+==========================================
+SISTEMA DE ESTRUTURA DE DADOS
+==========================================
+1 - Cadastrar registro na BST
+2 - Buscar registro por ID na BST
+3 - Remover registro da BST
+4 - Listar registros em-ordem
+8 - Exibir BST em formato de arvore
+9 - Gerar registros aleatorios na BST (Faker)
+5 - Inserir ID na estrutura linear
+6 - Remover da estrutura linear
+7 - Exibir estrutura linear
+0 - Encerrar
+==========================================
+Escolha uma opcao: 
+------------------------------------------
+--- Arvore BST (total: 5 | [E] esquerda, [D] direita) ---
+433 (Server-Cloud-66)
+|-- [E] 273 (AP-Sul-07)
+\-- [D] 841 (Gateway-Cloud-21)
+    |-- [E] 789 (Edge-Matriz-10)
+    \-- [D] 948 (Edge-Filial-SP-67)
+------------------------------------------
+
+==========================================
+SISTEMA DE ESTRUTURA DE DADOS
+==========================================
+1 - Cadastrar registro na BST
+2 - Buscar registro por ID na BST
+3 - Remover registro da BST
+4 - Listar registros em-ordem
+8 - Exibir BST em formato de arvore
+9 - Gerar registros aleatorios na BST (Faker)
+5 - Inserir ID na estrutura linear
+6 - Remover da estrutura linear
+7 - Exibir estrutura linear
+0 - Encerrar
+==========================================
+Escolha uma opcao: 
+------------------------------------------
+Encerrando sistema e liberando memoria...
+------------------------------------------

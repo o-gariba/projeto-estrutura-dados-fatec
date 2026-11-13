@@ -19,6 +19,7 @@ echo "=== Executando Testes End-to-End (E2E) ==="
 for entrada in "$CASOS_DIR"/*.in; do
     nome="$(basename "$entrada" .in)"
     esperado="$CASOS_DIR/$nome.esperado"
+    args_file="$CASOS_DIR/$nome.args"
     total=$((total + 1))
 
     if [ ! -f "$esperado" ]; then
@@ -27,8 +28,13 @@ for entrada in "$CASOS_DIR"/*.in; do
         continue
     fi
 
+    extra_args=()
+    if [ -f "$args_file" ]; then
+        read -r -a extra_args < "$args_file"
+    fi
+
     saida_tmp="$(mktemp)"
-    "$BIN" < "$entrada" > "$saida_tmp"
+    "$BIN" "${extra_args[@]}" < "$entrada" > "$saida_tmp"
 
     if diff -u "$esperado" "$saida_tmp"; then
         printf "  [E2E] %-35s [OK]\n" "$nome"
