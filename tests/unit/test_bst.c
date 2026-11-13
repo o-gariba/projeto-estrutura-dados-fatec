@@ -188,6 +188,76 @@ TEST(deve_remover_no_com_dois_filhos_e_raiz)
     bst_destruir(arv);
 }
 
+TEST(deve_remover_sucessor_profundo_com_subarvore_direita)
+{
+    BST *arv = bst_criar();
+    FILE *out = tmpfile();
+    char linha[256];
+    int esperados[] = {30, 55, 58, 60, 70, 80};
+    int i;
+
+    ASSERT_NOT_NULL(arv);
+    ASSERT_NOT_NULL(out);
+
+    /*
+     *         50
+     *        /  \
+     *      30    70
+     *           /  \
+     *         60    80
+     *        /
+     *      55
+     *        \
+     *         58
+     * Ao remover 50: suc = 55, pai_suc = 60 != no, e suc->dir = 58.
+     */
+    ASSERT_EQ_INT(BST_OK, bst_inserir(arv, novo_eq(50, "Eq-50")));
+    ASSERT_EQ_INT(BST_OK, bst_inserir(arv, novo_eq(30, "Eq-30")));
+    ASSERT_EQ_INT(BST_OK, bst_inserir(arv, novo_eq(70, "Eq-70")));
+    ASSERT_EQ_INT(BST_OK, bst_inserir(arv, novo_eq(60, "Eq-60")));
+    ASSERT_EQ_INT(BST_OK, bst_inserir(arv, novo_eq(80, "Eq-80")));
+    ASSERT_EQ_INT(BST_OK, bst_inserir(arv, novo_eq(55, "Eq-55")));
+    ASSERT_EQ_INT(BST_OK, bst_inserir(arv, novo_eq(58, "Eq-58")));
+
+    ASSERT_EQ_INT(BST_OK, bst_remover(arv, 50));
+    ASSERT_NULL(bst_buscar(arv, 50));
+    ASSERT_NOT_NULL(bst_buscar(arv, 55));
+    ASSERT_NOT_NULL(bst_buscar(arv, 58));
+    ASSERT_EQ_INT(6, (int)bst_tamanho(arv));
+
+    bst_listar_em_ordem(arv, out);
+    rewind(out);
+    for (i = 0; i < 6; i++) {
+        char padrao[32];
+        snprintf(padrao, sizeof(padrao), "ID: %d |", esperados[i]);
+        ASSERT_NOT_NULL(fgets(linha, (int)sizeof(linha), out));
+        ASSERT(strstr(linha, padrao) != NULL);
+    }
+    ASSERT_NULL(fgets(linha, (int)sizeof(linha), out));
+
+    fclose(out);
+    bst_destruir(arv);
+}
+
+TEST(deve_rejeitar_argumentos_invalidos)
+{
+    BST *arv = bst_criar();
+    Equipamento *eq = novo_eq(10, "Eq-10");
+
+    ASSERT_NOT_NULL(arv);
+    ASSERT_NOT_NULL(eq);
+
+    ASSERT_EQ_INT(BST_ERRO_ARGUMENTO, bst_inserir(NULL, eq));
+    ASSERT_EQ_INT(BST_ERRO_ARGUMENTO, bst_inserir(arv, NULL));
+    ASSERT_EQ_INT(BST_ERRO_ARGUMENTO, bst_remover(NULL, 10));
+    ASSERT_EQ_INT(BST_ERRO_ARGUMENTO, bst_remover(arv, 0));
+    ASSERT_EQ_INT(BST_ERRO_ARGUMENTO, bst_remover(arv, -5));
+    ASSERT_EQ_INT(0, (int)bst_tamanho(arv));
+
+    equipamento_destruir(eq);
+    bst_destruir(arv);
+}
+
 int main(void)
 {
     printf("\n=== Executando Testes da BST ===\n");
@@ -197,6 +267,8 @@ int main(void)
     RUN_TEST(deve_listar_em_ordem_crescente_de_id);
     RUN_TEST(deve_remover_no_folha_e_no_com_um_filho);
     RUN_TEST(deve_remover_no_com_dois_filhos_e_raiz);
+    RUN_TEST(deve_remover_sucessor_profundo_com_subarvore_direita);
+    RUN_TEST(deve_rejeitar_argumentos_invalidos);
 
     return TEST_RESUMO();
 }

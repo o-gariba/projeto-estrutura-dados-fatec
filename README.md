@@ -111,7 +111,7 @@ flowchart TD
 ## Testes automatizados e reprodutibilidade (R08)
 
 O projeto conta com:
-- **Testes unitários** (`tests/unit/`): construídos com o mini framework próprio em [`tests/unit/test.h`](tests/unit/test.h), cobrindo `io`, `equipamento`, `bst` e `lista` (**23 testes em 5 suítes**).
+- **Testes unitários** (`tests/unit/`): construídos com o mini framework próprio em [`tests/unit/test.h`](tests/unit/test.h), cobrindo `io`, `equipamento`, `bst` e `lista` (**27 testes em 5 suítes**).
 - **Testes ponta-a-ponta (E2E)** (`tests/e2e/`): o script [`tests/e2e/run_e2e.sh`](tests/e2e/run_e2e.sh) alimenta `./bin/rede` com arquivos `.in` e compara a saída exata contra `.esperado` via `diff -u` (**4 cenários**).
 - **Roteiro de evidências:** a tabela completa com entradas, passos, resultados esperados/obtidos e verificação de memória está em [`tests/ROTEIRO_EVIDENCIAS.md`](tests/ROTEIRO_EVIDENCIAS.md).
 
@@ -152,7 +152,9 @@ make
 │   ├── ROTEIRO_EVIDENCIAS.md  # Tabela reproduzivel de entradas, passos e resultados
 │   ├── unit/                  # test.h + test_framework.c, test_io.c, test_equipamento.c, test_bst.c, test_lista.c
 │   └── e2e/                   # run_e2e.sh + casos/*.in e casos/*.esperado
-├── diario/                    # Diario tecnico detalhado de cada etapa (00 a 08)
+├── diario/                    # Diario tecnico e guia de estudo (00 a 09)
+├── relatorio/
+│   └── relatorio.md           # Esqueleto completo do relatorio tecnico (base para PDF)
 └── Makefile
 ```
 
@@ -171,4 +173,4 @@ make
 | R07 | Ao remover de lista vazia, informar o usuário e manter funcionando; liberar toda memória ao encerrar | ✅ |
 | R08 | Testes reproduzíveis com entradas, passos e resultados esperados/obtidos e guia de reprodução no README | ✅ |
 | R09 | Separar obrigatoriamente BST em `bst.h`/`bst.c` e modularizar a lista encadeada em `.h`/`.c` | ✅ |
-| R10 | Repositório Git individual, README e relatório técnico em PDF | 🟨 código/README/base prontos; gerar PDF final a partir de `diario/08-consolidacao-relatorio.md` |
+| R10 | Repositório Git individual, README e relatório técnico em PDF | 🟨 código, README e esqueleto [`relatorio/relatorio.md`](relatorio/relatorio.md) prontos; preencher e gerar o PDF final (`pandoc relatorio/relatorio.md -o relatorio/relatorio-tecnico.pdf --pdf-engine=weasyprint`) |

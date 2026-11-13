@@ -32,9 +32,11 @@ ListaStatus lista_inserir_fim(Lista *lista, int id)
     novo->prox = NULL;
 
     if (lista->fim == NULL) {
+        /* Lista vazia: o unico no passa a ser simultaneamente inicio e fim. */
         lista->inicio = novo;
         lista->fim = novo;
     } else {
+        /* Lista populada: anexa apos `fim` e avanca `fim` em O(1). */
         lista->fim->prox = novo;
         lista->fim = novo;
     }
@@ -115,6 +117,7 @@ void lista_destruir(Lista *lista)
 
     atual = lista->inicio;
     while (atual != NULL) {
+        /* Guarda o proximo ponteiro antes de liberar `atual` para evitar Use-After-Free. */
         NoLista *prox = atual->prox;
         free(atual);
         atual = prox;

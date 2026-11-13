@@ -87,6 +87,21 @@ TEST(deve_inserir_fim_remover_inicio_e_reinserir_apos_esvaziar)
     lista_destruir(lista);
 }
 
+TEST(deve_tratar_argumentos_invalidos_e_descarte_de_id)
+{
+    Lista *lista = lista_criar();
+    ASSERT_NOT_NULL(lista);
+
+    ASSERT_EQ_INT(LISTA_ERRO_ARGUMENTO, lista_inserir_fim(NULL, 10));
+    ASSERT_EQ_INT(LISTA_ERRO_ARGUMENTO, lista_remover_inicio(NULL, NULL));
+
+    ASSERT_EQ_INT(LISTA_OK, lista_inserir_fim(lista, 77));
+    ASSERT_EQ_INT(LISTA_OK, lista_remover_inicio(lista, NULL));
+    ASSERT_EQ_INT(1, lista_vazia(lista));
+
+    lista_destruir(lista);
+}
+
 int main(void)
 {
     printf("\n=== Executando Testes da Lista Encadeada ===\n");
@@ -94,6 +109,7 @@ int main(void)
     RUN_TEST(deve_criar_lista_vazia_e_tratar_remocao_vazia);
     RUN_TEST(deve_rejeitar_ids_nao_positivos_e_permitir_repetidos);
     RUN_TEST(deve_inserir_fim_remover_inicio_e_reinserir_apos_esvaziar);
+    RUN_TEST(deve_tratar_argumentos_invalidos_e_descarte_de_id);
 
     return TEST_RESUMO();
 }

@@ -2,9 +2,15 @@
 
 #include <stdlib.h>
 
+/*
+ * Padrao recursivo com retorno de subarvore: cada chamada devolve a raiz
+ * (possivelmente nova ou modificada) da subarvore atual, permitindo que o pai
+ * religue `no->esq` ou `no->dir` sem precisar usar ponteiro duplo (NoBST **).
+ */
 static NoBST *inserir_recursivo(NoBST *no, Equipamento *eq, BstStatus *status)
 {
     if (no == NULL) {
+        /* Aloca o NoBST apenas quando encontra a folha vazia (evita malloc inutil em duplicatas). */
         NoBST *novo = malloc(sizeof(*novo));
         if (novo == NULL) {
             *status = BST_ERRO_MEMORIA;
@@ -78,9 +84,19 @@ static NoBST *remover_recursivo(NoBST *no, int id, int *removido)
 
     /*
      * Caso 3: 2 filhos.
-     * Localiza o sucessor em-ordem (menor ID da subarvore direita),
-     * transfere o ponteiro Equipamento* do sucessor para o no atual
-     * e libera somente o NoBST estrutural do sucessor.
+     * Localiza o sucessor em-ordem (menor ID da subarvore direita, que por
+     * definicao nao possui filho esquerdo: suc->esq == NULL).
+     * Transfere o ponteiro Equipamento* do sucessor para o no atual e libera
+     * somente o NoBST estrutural do sucessor (evitando double free).
+     *
+     *   (a) pai_suc == no:             (b) pai_suc != no:
+     *          no                             no
+     *           \                              \
+     *           suc (pai_suc->dir = suc->dir)  ... -> pai_suc
+     *             \                                    /
+     *           suc->dir                             suc (pai_suc->esq = suc->dir)
+     *                                                  \
+     *                                                suc->dir
      */
     pai_suc = no;
     suc = no->dir;
@@ -113,6 +129,11 @@ static void listar_em_ordem_recursivo(const NoBST *no, FILE *out)
     listar_em_ordem_recursivo(no->dir, out);
 }
 
+/*
+ * Percurso pos-ordem (esq -> dir -> raiz) e obrigatorio na destruicao:
+ * liberar `no` antes dos filhos (pre-ordem) causaria Use-After-Free ao ler
+ * `no->esq` ou `no->dir`.
+ */
 static void destruir_recursivo(NoBST *no)
 {
     if (no == NULL) {
@@ -153,6 +174,7 @@ BstStatus bst_inserir(BST *arv, Equipamento *eq)
     return status;
 }
 
+/* Busca iterativa: nao consome pilha de chamadas, mantendo espaco auxiliar O(1). */
 const Equipamento *bst_buscar(const BST *arv, int id)
 {
     const NoBST *atual;

@@ -137,6 +137,11 @@ IoStatus io_ler_inteiro_intervalo(FILE *in, int min, int max, int *destino)
         p++;
     }
 
+    /*
+     * Em arquiteturas 64 bits (LP64, como Linux x86_64), `long` tem 64 bits e
+     * `int` tem 32 bits. Por isso, um numero como 99999999999 cabe em `long`
+     * sem disparar ERANGE, exigindo checagem explicita contra INT_MIN/INT_MAX.
+     */
     if (errno == ERANGE || valor < (long)INT_MIN || valor > (long)INT_MAX) {
         return IO_ERRO_INTERVALO;
     }

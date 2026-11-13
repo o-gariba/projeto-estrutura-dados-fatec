@@ -165,6 +165,25 @@ TEST(deve_validar_funcao_io_texto_valido)
     ASSERT_EQ_INT(1, io_texto_valido("  a"));
 }
 
+TEST(deve_rejeitar_id_muito_longo_e_limpar_buffer)
+{
+    char entrada[128];
+    int id = 0;
+    FILE *f;
+
+    memset(entrada, '1', 85);
+    strcpy(entrada + 85, "\n42\n");
+
+    f = criar_entrada(entrada);
+    ASSERT_NOT_NULL(f);
+
+    ASSERT_EQ_INT(IO_ERRO_LONGO, io_ler_id(f, &id));
+    ASSERT_EQ_INT(IO_OK, io_ler_id(f, &id));
+    ASSERT_EQ_INT(42, id);
+
+    fclose(f);
+}
+
 int main(void)
 {
     printf("\n=== Executando Testes do Modulo IO ===\n");
@@ -176,6 +195,7 @@ int main(void)
     RUN_TEST(deve_validar_id_positivo_e_rejeitar_invalidos);
     RUN_TEST(deve_validar_opcoes_de_menu);
     RUN_TEST(deve_validar_funcao_io_texto_valido);
+    RUN_TEST(deve_rejeitar_id_muito_longo_e_limpar_buffer);
 
     return TEST_RESUMO();
 }
