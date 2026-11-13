@@ -1,6 +1,10 @@
 #include "bst.h"
 
 #include <stdlib.h>
+#include <string.h>
+
+#define BST_MAX_TRILHA_VIS 128
+#define BST_NOME_VIS_MAX   20
 
 /*
  * Padrao recursivo com retorno de subarvore: cada chamada devolve a raiz
@@ -129,6 +133,63 @@ static void listar_em_ordem_recursivo(const NoBST *no, FILE *out)
     listar_em_ordem_recursivo(no->dir, out);
 }
 
+static void imprimir_no_resumo(const Equipamento *eq, FILE *out)
+{
+    size_t len = strlen(eq->nome);
+    if (len <= BST_NOME_VIS_MAX) {
+        fprintf(out, "%d (%s)\n", eq->id, eq->nome);
+    } else {
+        fprintf(out, "%d (%.*s...)\n", eq->id, (int)(BST_NOME_VIS_MAX - 3),
+                eq->nome);
+    }
+}
+
+/*
+ * Impressao hierarquica estilo `tree` (pre-ordem: raiz -> esq -> dir).
+ * Usa apenas o vetor `tem_irmao` na stack (0 alocacoes na heap) para decidir
+ * se cada coluna ancestral precisa desenhar `|   ` (ha irmao direito abaixo)
+ * ou `    ` (ramo ja encerrado).
+ */
+static void imprimir_arvore_recursivo(const NoBST *no,
+                                      FILE *out,
+                                      int nivel,
+                                      char lado,
+                                      int eh_ultimo,
+                                      unsigned char tem_irmao[BST_MAX_TRILHA_VIS])
+{
+    int i;
+
+    if (no == NULL) {
+        return;
+    }
+
+    if (nivel == 0) {
+        imprimir_no_resumo(no->dado, out);
+    } else {
+        for (i = 0; i < nivel - 1; i++) {
+            if (i < BST_MAX_TRILHA_VIS && tem_irmao[i]) {
+                fputs("|   ", out);
+            } else {
+                fputs("    ", out);
+            }
+        }
+        fprintf(out, "%s[%c] ", eh_ultimo ? "\\-- " : "|-- ", lado);
+        imprimir_no_resumo(no->dado, out);
+
+        if (nivel - 1 < BST_MAX_TRILHA_VIS) {
+            tem_irmao[nivel - 1] = (unsigned char)(!eh_ultimo);
+        }
+    }
+
+    if (no->esq != NULL) {
+        imprimir_arvore_recursivo(no->esq, out, nivel + 1, 'E',
+                                  no->dir == NULL, tem_irmao);
+    }
+    if (no->dir != NULL) {
+        imprimir_arvore_recursivo(no->dir, out, nivel + 1, 'D', 1, tem_irmao);
+    }
+}
+
 /*
  * Percurso pos-ordem (esq -> dir -> raiz) e obrigatorio na destruicao:
  * liberar `no` antes dos filhos (pre-ordem) causaria Use-After-Free ao ler
@@ -218,6 +279,17 @@ void bst_listar_em_ordem(const BST *arv, FILE *out)
     }
 
     listar_em_ordem_recursivo(arv->raiz, out);
+}
+
+void bst_imprimir_arvore(const BST *arv, FILE *out)
+{
+    unsigned char tem_irmao[BST_MAX_TRILHA_VIS] = {0};
+
+    if (arv == NULL || out == NULL || arv->raiz == NULL) {
+        return;
+    }
+
+    imprimir_arvore_recursivo(arv->raiz, out, 0, 'R', 1, tem_irmao);
 }
 
 size_t bst_tamanho(const BST *arv)

@@ -81,6 +81,18 @@ BstStatus bst_remover(BST *arv, int id);
 void bst_listar_em_ordem(const BST *arv, FILE *out);
 
 /*
+ * bst_imprimir_arvore: exibe a hierarquia da BST em formato de arvore
+ * (percurso pre-ordem: raiz -> esq -> dir, estilo `tree` com marcadores [E]/[D]).
+ * Pre: arv != NULL, out != NULL.
+ * Pos: escreve a representacao hierarquica em `out` sem modificar a arvore
+ *      nem alocar memoria heap (usa apenas trilha fixa na stack).
+ * Complexidade: O(n) visitas; escrita proporcional a soma das profundidades
+ *               (O(n log n) no caso medio, O(n^2) no pior caso degenerado);
+ *               espaco auxiliar O(h) na pilha de chamadas (0 bytes na heap).
+ */
+void bst_imprimir_arvore(const BST *arv, FILE *out);
+
+/*
  * bst_tamanho: retorna a quantidade de registros armazenados na BST.
  * Complexidade: O(1).
  */
