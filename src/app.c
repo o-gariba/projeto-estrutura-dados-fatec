@@ -84,11 +84,11 @@ static void exibir_menu(FILE *out)
             "2 - Buscar registro por ID na BST\n"
             "3 - Remover registro da BST\n"
             "4 - Listar registros em-ordem\n"
-            "8 - Exibir BST em formato de arvore\n"
-            "9 - Gerar registros aleatorios na BST (Faker)\n"
-            "5 - Inserir ID na estrutura linear\n"
-            "6 - Remover da estrutura linear\n"
-            "7 - Exibir estrutura linear\n"
+            "5 - Exibir BST em formato de arvore\n"
+            "6 - Gerar registros aleatorios na BST (Faker)\n"
+            "7 - Inserir ID na estrutura linear\n"
+            "8 - Remover da estrutura linear\n"
+            "9 - Exibir estrutura linear\n"
             "0 - Encerrar\n"
             "==========================================\n"
             "Escolha uma opcao: ");
@@ -413,19 +413,19 @@ int app_executar_config(FILE *in, FILE *out, const AppConfig *cfg)
                     tratar_listar_bst(out, arv);
                     break;
                 case 5:
-                    executando = tratar_inserir_linear(in, out, lista);
-                    break;
-                case 6:
-                    tratar_remover_linear(out, lista);
-                    break;
-                case 7:
-                    tratar_exibir_linear(out, lista);
-                    break;
-                case 8:
                     tratar_imprimir_arvore_bst(out, arv);
                     break;
-                case 9:
+                case 6:
                     executando = tratar_gerar_faker_bst(in, out, arv, &faker);
+                    break;
+                case 7:
+                    executando = tratar_inserir_linear(in, out, lista);
+                    break;
+                case 8:
+                    tratar_remover_linear(out, lista);
+                    break;
+                case 9:
+                    tratar_exibir_linear(out, lista);
                     break;
                 case 0:
                     iniciar_bloco_saida(out);

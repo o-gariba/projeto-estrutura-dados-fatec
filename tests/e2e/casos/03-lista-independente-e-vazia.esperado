@@ -6,11 +6,11 @@ SISTEMA DE ESTRUTURA DE DADOS
 2 - Buscar registro por ID na BST
 3 - Remover registro da BST
 4 - Listar registros em-ordem
-8 - Exibir BST em formato de arvore
-9 - Gerar registros aleatorios na BST (Faker)
-5 - Inserir ID na estrutura linear
-6 - Remover da estrutura linear
-7 - Exibir estrutura linear
+5 - Exibir BST em formato de arvore
+6 - Gerar registros aleatorios na BST (Faker)
+7 - Inserir ID na estrutura linear
+8 - Remover da estrutura linear
+9 - Exibir estrutura linear
 0 - Encerrar
 ==========================================
 Escolha uma opcao: 
@@ -25,11 +25,11 @@ SISTEMA DE ESTRUTURA DE DADOS
 2 - Buscar registro por ID na BST
 3 - Remover registro da BST
 4 - Listar registros em-ordem
-8 - Exibir BST em formato de arvore
-9 - Gerar registros aleatorios na BST (Faker)
-5 - Inserir ID na estrutura linear
-6 - Remover da estrutura linear
-7 - Exibir estrutura linear
+5 - Exibir BST em formato de arvore
+6 - Gerar registros aleatorios na BST (Faker)
+7 - Inserir ID na estrutura linear
+8 - Remover da estrutura linear
+9 - Exibir estrutura linear
 0 - Encerrar
 ==========================================
 Escolha uma opcao: 
@@ -44,11 +44,11 @@ SISTEMA DE ESTRUTURA DE DADOS
 2 - Buscar registro por ID na BST
 3 - Remover registro da BST
 4 - Listar registros em-ordem
-8 - Exibir BST em formato de arvore
-9 - Gerar registros aleatorios na BST (Faker)
-5 - Inserir ID na estrutura linear
-6 - Remover da estrutura linear
-7 - Exibir estrutura linear
+5 - Exibir BST em formato de arvore
+6 - Gerar registros aleatorios na BST (Faker)
+7 - Inserir ID na estrutura linear
+8 - Remover da estrutura linear
+9 - Exibir estrutura linear
 0 - Encerrar
 ==========================================
 Escolha uma opcao: ID para inserir na lista encadeada: Erro: Valor fora do intervalo permitido. Informe um ID inteiro positivo.
@@ -65,11 +65,11 @@ SISTEMA DE ESTRUTURA DE DADOS
 2 - Buscar registro por ID na BST
 3 - Remover registro da BST
 4 - Listar registros em-ordem
-8 - Exibir BST em formato de arvore
-9 - Gerar registros aleatorios na BST (Faker)
-5 - Inserir ID na estrutura linear
-6 - Remover da estrutura linear
-7 - Exibir estrutura linear
+5 - Exibir BST em formato de arvore
+6 - Gerar registros aleatorios na BST (Faker)
+7 - Inserir ID na estrutura linear
+8 - Remover da estrutura linear
+9 - Exibir estrutura linear
 0 - Encerrar
 ==========================================
 Escolha uma opcao: ID para inserir na lista encadeada: 
@@ -84,11 +84,11 @@ SISTEMA DE ESTRUTURA DE DADOS
 2 - Buscar registro por ID na BST
 3 - Remover registro da BST
 4 - Listar registros em-ordem
-8 - Exibir BST em formato de arvore
-9 - Gerar registros aleatorios na BST (Faker)
-5 - Inserir ID na estrutura linear
-6 - Remover da estrutura linear
-7 - Exibir estrutura linear
+5 - Exibir BST em formato de arvore
+6 - Gerar registros aleatorios na BST (Faker)
+7 - Inserir ID na estrutura linear
+8 - Remover da estrutura linear
+9 - Exibir estrutura linear
 0 - Encerrar
 ==========================================
 Escolha uma opcao: ID para inserir na lista encadeada: 
@@ -103,11 +103,11 @@ SISTEMA DE ESTRUTURA DE DADOS
 2 - Buscar registro por ID na BST
 3 - Remover registro da BST
 4 - Listar registros em-ordem
-8 - Exibir BST em formato de arvore
-9 - Gerar registros aleatorios na BST (Faker)
-5 - Inserir ID na estrutura linear
-6 - Remover da estrutura linear
-7 - Exibir estrutura linear
+5 - Exibir BST em formato de arvore
+6 - Gerar registros aleatorios na BST (Faker)
+7 - Inserir ID na estrutura linear
+8 - Remover da estrutura linear
+9 - Exibir estrutura linear
 0 - Encerrar
 ==========================================
 Escolha uma opcao: ID do equipamento: Nome do equipamento: Tipo do equipamento: Localizacao: 
@@ -122,11 +122,11 @@ SISTEMA DE ESTRUTURA DE DADOS
 2 - Buscar registro por ID na BST
 3 - Remover registro da BST
 4 - Listar registros em-ordem
-8 - Exibir BST em formato de arvore
-9 - Gerar registros aleatorios na BST (Faker)
-5 - Inserir ID na estrutura linear
-6 - Remover da estrutura linear
-7 - Exibir estrutura linear
+5 - Exibir BST em formato de arvore
+6 - Gerar registros aleatorios na BST (Faker)
+7 - Inserir ID na estrutura linear
+8 - Remover da estrutura linear
+9 - Exibir estrutura linear
 0 - Encerrar
 ==========================================
 Escolha uma opcao: ID para inserir na lista encadeada: 
@@ -141,11 +141,11 @@ SISTEMA DE ESTRUTURA DE DADOS
 2 - Buscar registro por ID na BST
 3 - Remover registro da BST
 4 - Listar registros em-ordem
-8 - Exibir BST em formato de arvore
-9 - Gerar registros aleatorios na BST (Faker)
-5 - Inserir ID na estrutura linear
-6 - Remover da estrutura linear
-7 - Exibir estrutura linear
+5 - Exibir BST em formato de arvore
+6 - Gerar registros aleatorios na BST (Faker)
+7 - Inserir ID na estrutura linear
+8 - Remover da estrutura linear
+9 - Exibir estrutura linear
 0 - Encerrar
 ==========================================
 Escolha uma opcao: ID para remover da BST: 
@@ -160,11 +160,11 @@ SISTEMA DE ESTRUTURA DE DADOS
 2 - Buscar registro por ID na BST
 3 - Remover registro da BST
 4 - Listar registros em-ordem
-8 - Exibir BST em formato de arvore
-9 - Gerar registros aleatorios na BST (Faker)
-5 - Inserir ID na estrutura linear
-6 - Remover da estrutura linear
-7 - Exibir estrutura linear
+5 - Exibir BST em formato de arvore
+6 - Gerar registros aleatorios na BST (Faker)
+7 - Inserir ID na estrutura linear
+8 - Remover da estrutura linear
+9 - Exibir estrutura linear
 0 - Encerrar
 ==========================================
 Escolha uma opcao: 
@@ -179,11 +179,11 @@ SISTEMA DE ESTRUTURA DE DADOS
 2 - Buscar registro por ID na BST
 3 - Remover registro da BST
 4 - Listar registros em-ordem
-8 - Exibir BST em formato de arvore
-9 - Gerar registros aleatorios na BST (Faker)
-5 - Inserir ID na estrutura linear
-6 - Remover da estrutura linear
-7 - Exibir estrutura linear
+5 - Exibir BST em formato de arvore
+6 - Gerar registros aleatorios na BST (Faker)
+7 - Inserir ID na estrutura linear
+8 - Remover da estrutura linear
+9 - Exibir estrutura linear
 0 - Encerrar
 ==========================================
 Escolha uma opcao: 
@@ -198,11 +198,11 @@ SISTEMA DE ESTRUTURA DE DADOS
 2 - Buscar registro por ID na BST
 3 - Remover registro da BST
 4 - Listar registros em-ordem
-8 - Exibir BST em formato de arvore
-9 - Gerar registros aleatorios na BST (Faker)
-5 - Inserir ID na estrutura linear
-6 - Remover da estrutura linear
-7 - Exibir estrutura linear
+5 - Exibir BST em formato de arvore
+6 - Gerar registros aleatorios na BST (Faker)
+7 - Inserir ID na estrutura linear
+8 - Remover da estrutura linear
+9 - Exibir estrutura linear
 0 - Encerrar
 ==========================================
 Escolha uma opcao: 
@@ -217,11 +217,11 @@ SISTEMA DE ESTRUTURA DE DADOS
 2 - Buscar registro por ID na BST
 3 - Remover registro da BST
 4 - Listar registros em-ordem
-8 - Exibir BST em formato de arvore
-9 - Gerar registros aleatorios na BST (Faker)
-5 - Inserir ID na estrutura linear
-6 - Remover da estrutura linear
-7 - Exibir estrutura linear
+5 - Exibir BST em formato de arvore
+6 - Gerar registros aleatorios na BST (Faker)
+7 - Inserir ID na estrutura linear
+8 - Remover da estrutura linear
+9 - Exibir estrutura linear
 0 - Encerrar
 ==========================================
 Escolha uma opcao: 
@@ -236,11 +236,11 @@ SISTEMA DE ESTRUTURA DE DADOS
 2 - Buscar registro por ID na BST
 3 - Remover registro da BST
 4 - Listar registros em-ordem
-8 - Exibir BST em formato de arvore
-9 - Gerar registros aleatorios na BST (Faker)
-5 - Inserir ID na estrutura linear
-6 - Remover da estrutura linear
-7 - Exibir estrutura linear
+5 - Exibir BST em formato de arvore
+6 - Gerar registros aleatorios na BST (Faker)
+7 - Inserir ID na estrutura linear
+8 - Remover da estrutura linear
+9 - Exibir estrutura linear
 0 - Encerrar
 ==========================================
 Escolha uma opcao: 
@@ -255,11 +255,11 @@ SISTEMA DE ESTRUTURA DE DADOS
 2 - Buscar registro por ID na BST
 3 - Remover registro da BST
 4 - Listar registros em-ordem
-8 - Exibir BST em formato de arvore
-9 - Gerar registros aleatorios na BST (Faker)
-5 - Inserir ID na estrutura linear
-6 - Remover da estrutura linear
-7 - Exibir estrutura linear
+5 - Exibir BST em formato de arvore
+6 - Gerar registros aleatorios na BST (Faker)
+7 - Inserir ID na estrutura linear
+8 - Remover da estrutura linear
+9 - Exibir estrutura linear
 0 - Encerrar
 ==========================================
 Escolha uma opcao: 
@@ -274,11 +274,11 @@ SISTEMA DE ESTRUTURA DE DADOS
 2 - Buscar registro por ID na BST
 3 - Remover registro da BST
 4 - Listar registros em-ordem
-8 - Exibir BST em formato de arvore
-9 - Gerar registros aleatorios na BST (Faker)
-5 - Inserir ID na estrutura linear
-6 - Remover da estrutura linear
-7 - Exibir estrutura linear
+5 - Exibir BST em formato de arvore
+6 - Gerar registros aleatorios na BST (Faker)
+7 - Inserir ID na estrutura linear
+8 - Remover da estrutura linear
+9 - Exibir estrutura linear
 0 - Encerrar
 ==========================================
 Escolha uma opcao: 
@@ -293,11 +293,11 @@ SISTEMA DE ESTRUTURA DE DADOS
 2 - Buscar registro por ID na BST
 3 - Remover registro da BST
 4 - Listar registros em-ordem
-8 - Exibir BST em formato de arvore
-9 - Gerar registros aleatorios na BST (Faker)
-5 - Inserir ID na estrutura linear
-6 - Remover da estrutura linear
-7 - Exibir estrutura linear
+5 - Exibir BST em formato de arvore
+6 - Gerar registros aleatorios na BST (Faker)
+7 - Inserir ID na estrutura linear
+8 - Remover da estrutura linear
+9 - Exibir estrutura linear
 0 - Encerrar
 ==========================================
 Escolha uma opcao: 

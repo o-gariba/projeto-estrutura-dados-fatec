@@ -97,10 +97,10 @@ TEST(deve_pausar_limpar_tela_e_encerrar_em_modo_interativo)
 
     /*
      * Simula:
-     * 1) Opcao 9 (Faker) -> quantidade 3 -> ENTER da pausa
-     * 2) Opcao 8 (Arvore) -> EOF na pausa (encerra sem vazamentos)
+     * 1) Opcao 6 (Faker) -> quantidade 3 -> ENTER da pausa
+     * 2) Opcao 5 (Arvore) -> EOF na pausa (encerra sem vazamentos)
      */
-    fputs("9\n3\n\n8\n", in);
+    fputs("6\n3\n\n5\n", in);
     rewind(in);
 
     cfg.semente = 42u;
